@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Makino 3D PVC </title>
+ 
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/a643463461.js" crossorigin="anonymous"></script>
+  
+
+<style>
+
+.menu ul {   list-style-type: none;   margin: 0;   padding: 0; }
+.menu li {   padding: 8px;   margin-bottom: 7px; 
+      background-color: #33b5e5;   color: #ffffff;   
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); } 
+.menu li:hover {   background-color: #0099cc; } 
+.aside {   background-color: #33b5e5;   padding: 15px;   color: #ffffff;   text-align: center; 
+      font-size: 14px;   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+.footer {   background-color: #0099cc;   color: #ffffff;   text-align: center;   font-size: 12px;   padding: 15px; }  
+
+/* For desktop: */ .col-1 {width: 8.33%;}
+   .col-2 {width: 16.66%;}
+   .col-3 {width: 25%;}
+   .col-4 {width: 33.33%;} 
+   .col-5 {width: 41.66%;} 
+   .col-6 {width: 50%;}
+   .col-7 {width: 58.33%;} 
+   .col-8 {width: 66.66%;} 
+   .col-9 {width: 75%;}
+   .col-10 {width: 83.33%;} 
+   .col-11 {width: 91.66%;}
+   .col-12 {width: 100%;} 
+
+   @media only screen and (max-width:768px){
+  /*for mobile*/
+  [class*="col"]{
+    width:100%
+  }
+   }
+
+   @media only screen and (max-width:400){
+ /*for mobile*/
+[class*="col"]{
+  width:100%
+}
+ }
+
+ /*for mobile*/
+ @media only screen and (max-width:1200){
+
+[class*="col"]{
+  width:100%
+}
+ }
+
+  
+  
+.navbar-light .navbar-nav .nav-link {
+
+color: white;
+font-size: 22px;
+
+}
+
+.navbar-light .navbar-brand{
+
+color: white;
+font-size: 50px;
+
+}
+
+#myDIV { 
+  width: 400px;
+  height: 400px;
+  background-repeat: no-repeat, repeat;
+  background-blend-mode: overlay;
+
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin: 0 20px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  font-weight: bold;
+}
+
+
+   /* Center */
+   .centered {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(253, 253, 253);
+  text-shadow: 20px;
+  font-size: 40px;
+}
+
+.container {
+    
+    justify-content: center;
+    margin-top: 10px;
+  
+    
+   
+  }
+
+  .container1{
+    font-size: 32px;
+    margin-top: 5px;
+
+  }
+
+
+  .row {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+.animated-text{
+    color: goldenrod;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding:0 40px;
+    height: 60px;
+    overflow:hidden;
+    
+}
+     
+     .line{
+          text-transform: uppercase;
+          text-align: center;
+          font-size: 52px;
+          line-height: 60px;
+    }
+
+    .line:first-child{
+          animation: anim 12s infinite;
+
+    }
+
+    @keyframes anim{
+       0%{
+        margin-top:0;
+       }
+       16%{
+        margin-top:-60px;
+       }
+
+       33%{
+        margin-top:-120px;
+       }
+
+       50%{
+        margin-top:-180px;
+       }
+
+       66%{
+        margin-top:-120px;
+       }
+
+       82%{
+        margin-top:-60px;
+       }
+       
+       100%{
+        margin-top:0;
+       }
+   }
+
+   .my-line {
+  border: none; 
+  border-top: 3px solid goldenrod; 
+}
+
+   
+  .card-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; 
+  column-gap: 5px;
+  
+
+}
+
+.card {
+  width: 25%;
+  padding: 16px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 25rem;
+  margin-bottom: 10px;
+
+}
+.card:last-child {
+  margin-right: 0;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+  
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.social-icons a {
+  color: red;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.social-icons a:last-child {
+  margin-right: 0;
+}
+
+.footer-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.footer-nav li {
+  margin-right: 20px;
+}
+
+.footer-nav a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-weight: bold;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.footer-nav a:hover {
+  opacity: 1;
+}
+
+.company-info p {
+  margin: 0;
+  opacity: 0.8;
+}
+
+@media (max-width: 767px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+   
+  }
+}
+  
+  .social-icons {
+    margin-bottom: 20px;
+  }
+  
+  .footer-nav {
+    margin-bottom: 20px;
+  }
+
+
+
+ 
+
+
+</style>
+</head>
+
+<body>
+  
+      
+    <!--Navbar button-->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top background-color:black">
+      <div class="container">
+          <a class="navbar-brand fw-bold" href="index.html">M<span style="color: goldenrod;">A</span>KINO</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
+            <li class="nav-item">
+              <a class="nav-link " href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#abo">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="miniprojectgallery.html">GALLERY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#serv">SERVICES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="miniprojectcontact.html">CONTACT</a>
+            </li>
+          </ul>
+
+          <!--1stbutton-->
+         
+           <a class="btn btn-danger navbar-btn btn-outline-dark btn-lg float-btn ms-auto" href="miniprojectcontact.html" role="button">Book Now</a>
+        </div>
+      </div>     
+  
+  </nav>
+
+  <br>
+  <br>
+
+
+  <div class="container">
+    <div class="row1">
+    <div class="centered fw-bold"> Makino designs for  </div>
+  </div>
+</div>
+
+   <body style="background-image: url(backpicfi.jpg);background-attachment:fixed ;background-size: none;background-repeat: no-repeat;
+                background-position: right;">
+
+    <!--textslider-->  
+         <div class="container">
+        <div class="row1 animated-text col-12 text-center ">
+            <div class="line">Interior Design</div>
+            <div class="line">Residential</div>
+            <div class="line">Commercial</div>
+            <div class="line">Business</div>
+           </div>
+   
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           
+
+           <div class="container1 ">
+            <div class="row2">
+              <div class="col-12 text-center fw-bold" style="color:white;">
+                When you want to make changes to your home decor and want it to look luxurious and classy,
+                 the 3D PVC wall panels can deliver you the most mesmerizing look... 
+            </div>
+            </div>
+          </div>
+       <br>
+       <br>
+       <br>
+       <!--2ndbutton-->
+             <div class="col-12 text-center " id="serv">
+              <a class="btn btn-danger navbar-btn btn-outline-dark btn-lg float-btn ms-auto" href="miniprojectcontact.html" role="button">Get a qoute</a>
+              </div>
+           </div>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+          
+           <hr class="my-line">
+           <br>
+          
+            <!--services-->
+            
+          <section>
+            
+            <h1 style="text-align: center; color: white; font-weight: bold;">OUR SERVICES</h1><br>
+            <div class="container">
+              <div class="row">
+                <div class="card">
+                  <img src="back1.jpg" class="card-img-top" alt="Residential">
+                  <center><h2>Residential</h2></center>
+                  <div class="card-body">
+                    <p class="card-text">PVC wall panels are excellent heat and sound insulators, making them the perfect choice for usage in settings where noise and temperature regulation are crucial. Additionally, by keeping rooms warm in the winter and cool in the summer, they can aid in lowering energy expenditures.
+                    and we're glad to increase your sense of comfort in your home.</p>
+                  </div>
+                </div>
+            
+                <div class="card">
+                  <img src="serv3.jpg" class="card-img-top" alt="Commercial">
+                  <center><h2>Commercial</h2></center>
+                  <div class="card-body">
+                    <p class="card-text">Popular options for home and commercial uses include 3D PVC wall panels. They provide a variety of advantages, including reduced maintenance expenses. The materials used to create 3D PVC wall panels are solid and resistant to fading, staining, and UV ray damage. We're delighted to increase your level of comfort in your office.</p>
+                  </div>
+                </div>
+            
+                <div class="card">
+                  <img src="serv2.jpg" class="card-img-top" alt="Business">
+                  <center><h2>Business</h2></center>
+                  <div class="card-body">
+                    <p class="card-text">Our commitment to qualify and services ensure
+                      our clients are happy. With years of experience 
+                      and continuing research, our team is ready to serve 
+                      your interior design needs. We're happy to make you
+                      feel more comfortable in your business.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <br>
+          <br>
+          </section>
+
+          <br>
+          <br>
+          <br>
+
+
+         <section>
+          <main class="container">
+            <h1 style="color: white;text-align: center;fw-bold">Why use 3D PVC Panel?</h1>
+            <br>
+            <br>
+
+            <div class="row">
+              <div class="col-4">
+                <i class="fa-solid fa-check fa-2xl" style="color: #f0f415;"></i>
+                <span style="color: white; fw-bold ; font-size: 40px;" >Interiors chick and classy</span>
+              </div>
+              
+          
+              <div class="col-4">
+                <i class="fa-solid fa-check fa-2xl" style="color: #f0f415;"></i>
+                <span style="color: white; fw-bold ; font-size: 40px;" >You have enough flexibility to use</span>
+               </div>
+          
+              <div class="col-4">
+                <i class="fa-solid fa-check fa-2xl" style="color: #f0f415;"></i>
+                <span style="color: white; fw-bold ; font-size: 40px;" >Act as protector of the walls </span>
+              </div>
+            </div>
+            <br>
+            <br>
+          
+            <div class="row">
+              <div class="col-4">
+                <i class="fa-solid fa-check fa-2xl" style="color: #f0f415;"></i>
+                <span style="color: white; fw-bold ; font-size: 40px;" >Great fire resistant decorative pieces</span>
+              </div>
+          
+              <div class="col-4">
+                <i class="fa-solid fa-check fa-2xl" style="color: #f0f415;"></i>
+                <span style="color: white; fw-bold ; font-size: 40px;" >Ensure substantial noise insulation</span>
+              </div>
+          
+              <div class="col-4">
+                <i class="fa-solid fa-check fa-2xl" style="color: #f0f415;"></i>
+                <span style="color: white; fw-bold ; font-size: 40px;" >Maintenance is very easy</span>
+              </div>
+            </div>
+          </main>
+
+        </section>
+
+<br>
+<br>
+<!--3rdbutton-->
+
+<div class="col-12 text-center " id="abo">
+  <a class="btn btn-danger navbar-btn btn-outline-dark btn-lg float-btn ms-auto" href="miniprojectcontact.html" role="button">Learn More</a>
+  </div>
+</div>
+<br>
+<br>
+     
+<!--aboutme-->
+<div style="box-shadow: 100px 100px 150px grey; padding: 20px; overflow:auto; width:100%;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="aboutpic.jpg" alt="Your Image" style="max-width:100%;">
+      </div>
+      <div class="col-md-8">
+        <h1 style="text-align:center; font-weight:bold; color:white;">OUR TEAM</h1><br>
+        <p style="margin-left: 20px; margin-right: 20px; color: white; font-weight:bold;">Based near to the Capital of China, Makino Decoration Material Sales Co., Ltd is a manufacturing and marketing company that services the Chinese and overseas market. With two brands, O’Yark Wall and Imageflor, we provide TOP-quality, fashionable designs, a reasonable price, prompt delivery, and excellent service. As a result of this, we have been recognized and highly praised by customers all over the world.</p>
+        <p style="margin-left: 20px; margin-right: 20px; color: white; font-weight:bold;">Makino is a brand for wall decoration materials, with products such as 3D PVC wall panels, WPC wall panels, PVC Marble UV board, 3D bamboo fiber wall panels, 3D XPE Foam wall panels, PU moulding, faux PU stone, wallpapers, framed wall art, customized wall murals, a total of 10 series, and thousands of designs. Imageflor specializes in floor decoration, providing LVT Floors (self-adhesive vinyl floor), SPC floor, dance flooring, commercial flooring, etc. All of our products are carefully inspected and quality controlled prior to shipment.</p>
+        <p style="margin-left: 20px; margin-right: 20px; color: white; font-weight:bold;">We have combined advanced technology from around the world with the cost advantages of MADE IN CHINA to bring the most attractive products to consumers all over the world. Hebei Pande is constantly striving to improve processes and products to reflect the changing demands of the marketplace, enabling us to provide customization services, and both OEM and ODM options are welcome!</p>
+        <p style="margin-left: 20px; margin-right: 20px; color: white; font-weight:bold;">Thank you for your interest in Hebei Pande. If you would like to know more about us, please don’t hesitate to contact us. We are always standing by you.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+ <!--Testimonials-->
+<section>
+   <div class id="conta"></div>
+  <h1 style="color: white;fw-bold;text-align: center;">Testimonials</h1>
+  
+ <br>
+
+ <div style="box-shadow: 100px 100px 150px grey; padding: 20px; overflow:auto; width:100%;">
+ <center><div class="dot-container">
+  <h3><q style="color: goldenrod;fw-bold">This was our fourth installment and from one office to the next you can see how amazing they are!</q></h3>
+      <p class style="color: white; fw-bold">Interior Designer- John Keats</p>
+ </div></center>
+</div>
+
+</section>
+<br>
+<br>
+<br>
+<footer>
+  <div class="footer-content">
+    <div class="social-icons">
+      <a href="https://www.facebook.com/3DPVCDesign/" target="_blank"><i class="fab fa-facebook"></i></a>Facebook
+      <a href="https://twitter.com/MakinoChristine" target="_blank"><i class="fab fa-twitter"></i></a> Twitter
+      <a href="https://www.instagram.com/makinocinco1588/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>Instagram
+      </div>
+    <div class="footer-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="http://127.0.0.1:5500/EXCERCISE1/Assignment/index.html#abo">About Us</a></li>
+        <li><a href="http://127.0.0.1:5500/EXCERCISE1/Assignment/index.html#serv">Services</a></li>
+        <li><a href="miniprojectcontact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="company-info">
+      <p> 2-09 Shangfeng Square, No.67 Qianlian Street,</p>
+      <p>High-Tech Zone, Shijiazhuang, Hebei, China 050000</p>
+      <p>Mobile/WhatsApp: +8617333933130</p>
+      <p>Email: fiona@oyarkwallpaper.com</p>
+      <br>
+      <p>&copy; 2021 Example Company. All Rights Reserved.</p><br>
+  </div>
+</footer>
+
+</body>
+
+
+</html>
+
+  
+    
